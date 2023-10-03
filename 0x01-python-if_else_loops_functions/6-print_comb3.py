@@ -1,10 +1,5 @@
 #!/usr/bin/python3
-first_combination = True
-
-for digit1 in range(10):
-    for digit2 in range(digit1 + 1, 10):
-        if not first_combination:
-            print(", ", end='')
-        else:
-            first_combination = False
-        print("{:02d}".format(digit1 * 10 + digit2), end='')
+for index in range(0, 8):
+    for q in range(index + 1, 10):
+        print("{:d}{:d}".format(index, q), end=', ')
+print("{:d}{:d}".format(index + 1, q))

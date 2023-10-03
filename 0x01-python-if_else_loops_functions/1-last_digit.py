@@ -13,4 +13,4 @@ elif ld > 5:
     print("{}{} is {} and is greater than 5".format(str, number, ld))
 
 else:
-    print("{} {} is {} and is less than 6 and not 0".format(str,number , ld))
+    print("{}{} is {} and is less than 6 and not 0".format(str,number , ld))

@@ -23,6 +23,7 @@ if __name__ == '__main__':
             print("{:d} {} {:d} = {:d}".format(ag_1, ag_2, ag_3, result))
         else:
             print("Unknown operator. Available operators: +, -, * and /")
+            sys.exit(1)
 
     else:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")

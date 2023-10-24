@@ -16,20 +16,20 @@ class Square:
 
         self.size = size
 
-        @property
-        def size(self):
-            """ get attribute value to be used in class"""
-            return self.__size
+    @property
+    def size(self):
+        """ get attribute value to be used in class"""
+        return self.__size
         
-        @size.setter
-        def size(self, value):
-            if type(value) is not int:
-                raise TypeError("size must be an integer")
+    @size.setter
+    def size(self, value):
+        if type(value) is not int:
+            raise TypeError("size must be an integer")
 
-            if value < 0:
-                raise ValueError("value must be >= 0")
-            self.__size = value
+        if value < 0:
+            raise ValueError("value must be >= 0")
+        self.__size = value
 
-        def area(self):
-            """ area of square"""
-            return self.__size ** 2
+    def area(self):
+        """ area of square"""
+        return self.__size ** 2

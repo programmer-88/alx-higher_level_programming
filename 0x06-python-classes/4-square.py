@@ -18,6 +18,7 @@ class Square:
 
         @property
         def size(self):
+            """ get attribute value to be used in class"""
             return self.__size
         
         @size.setter
@@ -30,4 +31,5 @@ class Square:
             self.__size = value
 
         def area(self):
+            """ area of square"""
             return self.__size ** 2

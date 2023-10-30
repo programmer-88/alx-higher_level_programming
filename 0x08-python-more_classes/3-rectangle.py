@@ -42,12 +42,23 @@ class Rectangle:
     def area(self):
         """calculate the area of the rectangle"""
         return self.__width * self.__height
-    
+
     def perimeter(self):
         """returns the rectangle perimeter"""
-        if self.height is 0:
+        if self.height == 0:
             perimeter = 0
-        elif self.width is 0:
+        elif self.width == 0:
             perimeter = 0
         else:
             perimeter = (self.width * 2) + (self.height * 2)
+        return perimeter
+
+    def __str__(self):
+        """print the rectangle with character #"""
+        rect_str = ""
+        if self.width == 0 and self.height == 0:
+            return rect_str
+
+        for i in range(self.height):
+            rect_str += "#" * self.width + "\n"
+        return rect_str[:-1]

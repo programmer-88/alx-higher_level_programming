@@ -2,6 +2,7 @@
 
 """ This class implements a rectangle"""
 
+
 class Rectangle:
     """ This class implements a rectangle"""
     pass

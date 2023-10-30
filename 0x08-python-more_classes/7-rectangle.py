@@ -104,7 +104,7 @@ class Rectangle:
             return ""
 
         return "\n".join([str(self.print_symbol) *
-            self.__width for _ in range(self.__height)])
+                          self.__width for _ in range(self.__height)])
 
     def __repr__(self):
         """ Method that returns a string representation of the rectangle """

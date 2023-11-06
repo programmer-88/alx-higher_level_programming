@@ -4,4 +4,10 @@
 
 
 def lookup(obj):
+    """
+    Args:
+        obj: initialized object
+        Returns: list of attributes and methods
+                 of a given object
+    """
     return dir(obj)

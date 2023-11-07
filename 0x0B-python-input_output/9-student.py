@@ -2,6 +2,7 @@
 
 """Student class"""
 
+
 class Student:
     """Student class"""
     def __init__(self, first_name, last_name, age):
@@ -18,7 +19,7 @@ class Student:
 
     def to_json(self):
         """Return info in json format"""
-        return{
+        return {
             "first_name": self.first_name,
             "last_name": self.last_name,
             "age": self.age

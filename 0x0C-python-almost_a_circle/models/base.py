@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
 """Base class for all objects in this project"""
+
+
 class Base:
-    """Thsi is a base class"""
+    """This is a base class"""
 
     __nb_objects = 0
 

@@ -149,5 +149,5 @@ class Rectangle(Base):
     
     def display(self):
         """display of rectangle"""
-        for i in int(Rectangle.area):
-            print("#")
+        for _ in range(self.height):
+            print("#" * self.__width)

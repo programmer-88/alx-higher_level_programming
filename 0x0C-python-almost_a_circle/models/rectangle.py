@@ -167,21 +167,23 @@ class Rectangle(Base):
         """
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} {self.width}/{self.height}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         update Rectange
+        Args:
+            *args:variable number of arguments
+            **kwargs: variable number of arguments
         """
-        if len(args) >= 1:
-            self.id = args[0]
-        
-        if len(args) >= 2:
-            self.width = args[1]
-        
-        if len(args) >= 3:
-            self.height = args[2]
-        
-        if len(args) >= 4:
-            self.x = args[3]
-        
-        if len(args) >= 5:
-            self.y = args[4]
+        if args:
+            self.id = args[0] if len(args) >= 1 else self.id
+            self.width = args[1] if len(args) >= 2 else self.width
+            self.height = args[2] if len(args) >= 3 else self.height
+            self.x = args[3] if len(args) >= 4 else self.x
+            self.y = args[4] if len(args) >= 5 else self.y
+
+        elif kwargs:
+            self.id = kwargs.get('id', self.id)
+            self.width = kwargs.get('width', self.width)
+            self.height = kwargs.get('height', self.height)
+            self.x = kwargs.get('x', self.x)
+            self.y = kwargs.get('y', self.y)

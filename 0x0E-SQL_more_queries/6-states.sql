@@ -5,4 +5,4 @@
 CREATE IF NOT EXISTS hbtn_0d_usa(
     id SERIAL PRIMARY KEY,
     name VARCHAR(255)
-)
+);

@@ -6,4 +6,4 @@ WHERE state_id = (
     SELECT id FROM states
     WHERE name = 'Carlifonia'
 )
-ORDER BY cities.name ASC;
+ORDER BY id;

@@ -8,16 +8,19 @@ if __name__ == "__main__":
     import MySQLdb
     from sys import argv
 
-    mysql_username = sys.argv[1]
-    mysql_password = sys.argv[2]
-    database_name = sys.argv[3]
+    HOST = 'localhost'
+    PORT = 3306
+    USER = argv[1]
+    PASSWORD = argv[2]
+    DATABASE = argv[3]
 
     db = MySQLdb.connect(
-        host="localhost",
-        port=3306,
-        user=mysql_username,
-        passwd=mysql_password,
-        db=database_name,
+        host=HOST,
+        port=PORT,
+        user=USER,
+        passwd=PASSWORD,
+        db=DATABASE,
+        charset="utf8"
     )
 
     cursor = db.cursor()

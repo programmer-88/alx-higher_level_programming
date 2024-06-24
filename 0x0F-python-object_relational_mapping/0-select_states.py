@@ -1,9 +1,13 @@
 #!/usr/bin/python3
 
-import sys
-import MySQLdb
+"""
+Script that prints a list of states from the database hbtn_0e_usa
+"""
 
 if __name__ == "__main__":
+    import MySQLdb
+    from sys import argv
+
     mysql_username = sys.argv[1]
     mysql_password = sys.argv[2]
     database_name = sys.argv[3]

@@ -4,34 +4,23 @@
 Script that prints a list of states from the database hbtn_0e_usa
 """
 
-if __name__ == "__main__":
-    import MySQLdb
-    from sys import argv
+import MySQLdb
+import sys
 
-    HOST = 'localhost'
-    PORT = 3306
-    USER = argv[1]
-    PASSWORD = argv[2]
-    DATABASE = argv[3]
+if __name__ == "__main__":
+    """script that lists all states from the database hbtn_0e_0_usa"""
 
     db = MySQLdb.connect(
-        host=HOST,
-        port=PORT,
-        user=USER,
-        passwd=PASSWORD,
-        db=DATABASE,
-        charset="utf8"
+        host="localhost",
+        port=3306,
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        db=sys.argv[3],
     )
-
-    cursor = db.cursor()
-
-    cursor.execute("SELECT * FROM states ORDER BY states.id")
-
-    rows = cursor.fetchall()
-
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    rows = cur.fetchall()
     for row in rows:
         print(row)
-
-    
-    cursor.close()
+    cur.close()
     db.close()
